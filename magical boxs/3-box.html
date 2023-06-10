@@ -56,20 +56,24 @@
 <body>
     <div class="container">
         <div class="boxs">
+            <!-- creat 3 box -->
             <div class="box" id="box_1"></div>
             <div class="box" id="box_2"></div>
             <div class="box" id="box_3"></div>
         </div>
+        <!-- creat a buttom -->
         <button class="button" type="button" id="btn">AUTO</button>
     </div>
 </body>
     <script type="text/javascript">
+        // creat global variable 
         let box_1 = document.getElementById('box_1');
         let box_2 = document.getElementById('box_2');
         let box_3 = document.getElementById('box_3');
         let btn = document.getElementById('btn');
         let arr = [{img:1},{img:2},{img:3},{img:4},{img:5},{img:6},{img:7},{img:8},{img:9},{img:10},{img:11},{img:12},{img:13},{img:14},{img:15},{img:16},{img:17},{img:18},{img:19},{img:20},{img:21},{img:22},]
        
+        // box-1 event (box zoom and zoom out)
         box_1.addEventListener('mouseover' , bigbox);
         function bigbox(){
             let box_1 = document.getElementById('box_1');
@@ -85,12 +89,14 @@
             }
         }
         
+        // box-2 event (color change)
         box_2.addEventListener("mouseover",box2);
         function box2(){
         let random = Math.floor(Math.random() * 10000);
         box_2.style.backgroundColor = `#${random}`;
         }
 
+        //box-3 event (img change)
         box_3.addEventListener("mouseover",box3);
         function box3(){            
             let random = Math.floor(Math.random()* (0-22)+22);
